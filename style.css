@@ -1,66 +1,116 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #fdf3e7;
-}
-header {
-  background: #e6c28b;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-nav ul li {
-  cursor: pointer;
-}
-.lang-buttons button {
-  margin-left: 0.5rem;
-}
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
-  background: #f4dab5;
-}
-.hero-text h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.categories, .products {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
-  flex-wrap: wrap;
-}
-.category, .product {
-  background: #fff;
-  padding: 1rem;
-  text-align: center;
-  border: 1px solid #ccc;
-}
-.best-sellers h2 {
-  text-align: center;
-  margin-top: 2rem;
-}
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
+    .navbar {
+      padding: 1rem 0;
+    }
+
+    .navbar-nav {
+      margin: auto;
+    }
+
+    @media (max-width: 991.98px) {
+      .navbar-nav {
+        margin: 0;
+      }
+
+      .navbar-collapse {
+        text-align: center;
+      }
+
+      .get-started-btn {
+        margin-top: 10px;
+      }
+    }    .carousel-item {
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .carousel-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6); /* Black overlay */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+    }
+
+    .carousel-caption h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .carousel-caption p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .carousel-caption h1 {
+        font-size: 2rem;
+      }
+      .carousel-caption p {
+        font-size: 1rem;
+      }
+    }
+<style>
+
+
+ .project-card {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
   }
-  nav ul {
-    flex-direction: column;
+
+  .project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .project-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .project-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    opacity: 0;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    transition: opacity 0.4s ease;
+    font-size: 1.25rem;
+    font-weight: 500;
   }
-}
+
+  .project-card:hover .overlay {
+    opacity: 1;
+  }
+
+  .raised {
+    margin-top: -20px;
+  }
+
+  .lower {
+    margin-top: 20px;
+  }
+</style>
+
+
+<style>
+  .text-gold {
+    color: #d4af37;
+  }
+</style>
